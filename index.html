@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>KIOSK_POSTCARD</title>
+    <link rel="icon" href="./images/header/postcard_icon.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/log.css" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="page_grid" id="home">
+      <header class="container header" id="headerVideo">
+        <div class="image-container">
+          <div class="image-container_back"></div>
+          <div class="image-container_cloud_1">
+            <img src="./images/header/cloud_1.png" alt="cloud_png" />
+          </div>
+          <div class="image-container_cloud_2">
+            <img src="./images/header/cloud_2.png" alt="cloud_png" />
+          </div>
+          <div class="image-container_hand_phone">
+            <img src="./images/header/hand_phone.png" alt="cloud_png" />
+          </div>
+        </div>
+
+        <div class="textHeader">
+          <p class="textBig">KIOSK</p>
+          <h1>receive a postcard from home</h1>
+        </div>
+      </header>
+      <!--    МЕНЮ фиксированное -->
+      <nav class="container__menu">
+        <div class="header__burgerMenu">
+          <span></span>
+        </div>
+        <ul class="menu">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#historyOfPinsk">About us </a>
+          </li>
+          <li>
+            <a href="#historyPlaces">Postcards</a>
+          </li>
+          <li>
+            <a href="#pinskMap">Map</a>
+          </li>
+          <li>
+            <a href="#ourContacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container container__history" id="historyOfPinsk">
+        <div class="history_photo">
+          <img src="./images/container__history/1.jpg" alt="Pinsk_photo" />
+        </div>
+
+        <div class="history_text">
+          <h2>About us</h2>
+          <p>
+            KIOSK is popular with people who have moved and miss their hometown.
+          </p>
+          <p>
+            Our service for those who like to receive real postcards depicting
+            the historical sights of the city.
+          </p>
+          <p>
+            You will find the right postcard or greeting card for every
+            occasion, which you can complete with your own personal text. At the
+            end of the order, you can choose from among all the usual payment
+            methods. Then your postcard will be printed and we will send it
+            anywhere in the world. No matter where you are.
+          </p>
+        </div>
+      </div>
+
+      <div class="container container__flexPhoto" id="historyPlaces">
+        <h2>Postcard gallery</h2>
+        <article>
+          <p>
+            Just choose one of our postcard and write your personal text on the
+            back side. Now all you have to do is add one or more recipients,
+            pay, and we will produce your postcard within 24 hours and send it
+            out by mail to anywhere in the world. All of our postcards are made
+            in a 4.1 x 5.8 inches format, which corresponds to the international
+            DIN A6 norm, the traditional postcard format. We print all postcards
+            by digital print on 300g thick paper or postcard cardboard. The
+            postcard will also be given a high quality gloss lamination on the
+            front side.
+          </p>
+        </article>
+
+        <div class="paggination_container">
+          <div class="search-container">
+            <div class="input-group">
+              <select class="form-select" id="pagesSelect">
+                <option value="20" selected>20</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <input
+                type="search"
+                class="form-control rounded input-search"
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="search-addon"
+              />
+              <a class="button search" href="#" target="_self">search</a>
+            </div>
+          </div>
+          <nav aria-label="...">
+            <ul class="pagination pagination-lg"></ul>
+          </nav>
+          <div class="flexPhoto__items"></div>
+        </div>
+        <div>
+          <a class="toTopButton" href="#historyPlaces" target="_self"
+            ><i class="fa-solid fa-chevron-up fa-fade"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="container container__facts" id="aboutUs">
+        <h2>We stamp and mail all postcards - worldwide.</h2>
+        <p>From Pinsk to everywhere.</p>
+        <div class="facts__box">
+          <div class="fact__box">
+            <div class="fact__box_photo">
+              <img src="./images/header/postcard.png" alt="postcard" />
+            </div>
+            <a href="#historyPlaces">Choose postcard</a>
+            <p>
+              Choose your favorite postcard with the image of the city from our
+              catalog
+            </p>
+          </div>
+
+          <div class="fact__box">
+            <div class="fact__box_photo">
+              <img src="./images/header/cart_red_postcard.png" alt="cart" />
+            </div>
+            <a href="#cart_page">Adding to cart</a>
+            <p>Add your favorite postcard to your cart</p>
+          </div>
+
+          <div class="fact__box">
+            <div class="fact__box_photo">
+              <img src="./images/header/location.png" alt="location" />
+            </div>
+            <a href="#historyPlacess">Adding address</a>
+            <p>Enter your address details for sending postcards</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container container__questions" id="ourGoals">
+        <div class="questions_flex">
+          <section class="questions__accordion">
+            <h2>About us</h2>
+
+            <div class="ac">
+              <input class="ac-input" id="ac-1" name="ac-1" type="radio" />
+              <label class="ac-label" for="ac-1">Photo-Postcards</label>
+
+              <article class="ac-text">
+                <div class="ac-sub">
+                  <input
+                    type="checkbox"
+                    class="ac-input"
+                    id="ac-2"
+                    name="ac-2"
+                  />
+                  <label for="ac-2" class="ac-label"
+                    >Greeting Cards from home</label
+                  >
+                  <article class="ac-sub-text">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Repudiandae voluptatum officiis facilis quae, soluta
+                      impedit sapiente veritatis in, ad sunt numquam vel dolores
+                      quisquam beatae ullam sit! Quos, est perspiciatis?
+                      Incidunt eligendi dolorum repellendus necessitatibus
+                      dolore exercitationem ipsum sint fuga.
+                    </p>
+                  </article>
+                </div>
+
+                <div class="ac-sub">
+                  <input
+                    type="checkbox"
+                    class="ac-input"
+                    id="ac-3"
+                    name="ac-3"
+                  />
+                  <label for="ac-3" class="ac-label">Photo Prints</label>
+                  <article class="ac-sub-text">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Repudiandae voluptatum officiis facilis quae, soluta
+                      impedit sapiente veritatis in, ad sunt numquam vel dolores
+                      quisquam beatae ullam sit! Quos, est perspiciatis?
+                      Incidunt eligendi dolorum repellendus necessitatibus
+                      dolore exercitationem ipsum sint fuga.
+                    </p>
+                  </article>
+                </div>
+              </article>
+            </div>
+
+            <div class="ac">
+              <input class="ac-input" id="ac-4" name="ac-1" type="radio" />
+              <label class="ac-label" for="ac-4">Gift Certificates</label>
+
+              <article class="ac-text">
+                <div class="ac-sub">
+                  <input
+                    type="checkbox"
+                    class="ac-input"
+                    id="ac-5"
+                    name="ac-5"
+                  />
+                  <label for="ac-5" class="ac-label">Discount</label>
+                  <article class="ac-sub-text">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Repudiandae voluptatum officiis facilis quae, soluta
+                      impedit sapiente veritatis in, ad sunt numquam vel dolores
+                      quisquam beatae ullam sit! Quos, est perspiciatis?
+                      Incidunt eligendi dolorum repellendus necessitatibus
+                      dolore exercitationem ipsum sint fuga.
+                    </p>
+                  </article>
+                </div>
+
+                <div class="ac-sub">
+                  <input
+                    type="checkbox"
+                    class="ac-input"
+                    id="ac-6"
+                    name="ac-6"
+                  />
+                  <label for="ac-6" class="ac-label">Postcards</label>
+                  <article class="ac-sub-text">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Repudiandae voluptatum officiis facilis quae, soluta
+                      impedit sapiente veritatis in, ad sunt numquam vel dolores
+                      quisquam beatae ullam sit! Quos, est perspiciatis?
+                      Incidunt eligendi dolorum repellendus necessitatibus
+                      dolore exercitationem ipsum sint fuga.
+                    </p>
+                  </article>
+                </div>
+              </article>
+            </div>
+
+            <div class="ac">
+              <input class="ac-input" id="ac-7" name="ac-1" type="radio" />
+              <label class="ac-label" for="ac-7">Postcards</label>
+
+              <article class="ac-text">
+                <div class="ac-sub">
+                  <input
+                    type="checkbox"
+                    class="ac-input"
+                    id="ac-8"
+                    name="ac-8"
+                  />
+                  <label for="ac-8" class="ac-label">Postcards</label>
+                  <article class="ac-sub-text">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Repudiandae voluptatum officiis facilis quae, soluta
+                      impedit sapiente veritatis in, ad sunt numquam vel dolores
+                      quisquam beatae ullam sit! Quos, est perspiciatis?
+                      Incidunt eligendi dolorum repellendus necessitatibus
+                      dolore exercitationem ipsum sint fuga.
+                    </p>
+                  </article>
+                </div>
+
+                <div class="ac-sub">
+                  <input
+                    type="checkbox"
+                    class="ac-input"
+                    id="ac-9"
+                    name="ac-9"
+                  />
+                  <label for="ac-9" class="ac-label">Postcards</label>
+                  <article class="ac-sub-text">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Repudiandae voluptatum officiis facilis quae, soluta
+                      impedit sapiente veritatis in, ad sunt numquam vel dolores
+                      quisquam beatae ullam sit! Quos, est perspiciatis?
+                      Incidunt eligendi dolorum repellendus necessitatibus
+                      dolore exercitationem ipsum sint fuga.
+                    </p>
+                  </article>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="questions__photo">
+            <img src="./images/container__questions/1.jpg" alt="old Pinsk" />
+          </section>
+        </div>
+      </div>
+
+      <div class="container container__maps" id="pinskMap">
+        <div class="maps_title">
+          <h2>Our postcards on the map</h2>
+        </div>
+        <iframe
+          id="my_map"
+          src="https://www.google.com/maps/d/embed?mid=1y_x7jzaL8gD0LprRkHqUlVm1PzdgVkJm&ehbc=2E312F"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <footer class="container footer" id="ourContacts">
+        <div class="footer__wrapper">
+          <div class="footer__wrapper_logo">
+            <div>
+              <img src="./images/header/postcard.png" alt="Pinsk_logo" />
+            </div>
+            <div class="footer__text">
+              <p>KIOSK</p>
+            </div>
+          </div>
+          <ul class="footer__wrapper_navigation">
+            <li>Navigation:</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#historyOfPinsk">About us </a></li>
+            <li><a href="#historyPlaces">Postcards</a></li>
+            <li><a href="#pinskMap">Map</a></li>
+            <li><a href="#ourContacts">Contacts</a></li>
+          </ul>
+          <ul class="footer__wrapper_navigation">
+            <li>Usefull resourses:</li>
+            <li>
+              <a
+                href="https://www.tripadvisor.ru/Tourism-g1136483-Pinsk_Brest_Region-Vacations.html"
+                target="_blank"
+                >TripAdvisor</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.booking.com/city/by/pinsk.ru.html"
+                target="_blank"
+                >Booking</a
+              >
+            </li>
+            <li>
+              <a href="https://www.rw.by/" target="_blank">rw.by</a>
+            </li>
+            <li>
+              <a href="https://busfor.by/ru/bus-to/pinsk" target="_blank"
+                >Busfor.by</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer__social_links">
+          <div id="enter_admin">
+            <a href="#login_page" target="_self" title="Administrator Login"
+              >Login</a
+            >
+          </div>
+          <a
+            href="https://www.youtube.com/watch?v=GPKRx6A8X6M"
+            target="_blank"
+            title="Перейти в youtube"
+            ><i class="fa-brands fa-youtube fa-2x"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/vasil1987/"
+            target="_blank"
+            title="Перейти в instagram"
+            ><i class="fa-brands fa-instagram fa-2x"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/%D0%B2%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D0%B9-%D1%85%D0%BE%D0%BB%D0%BE%D0%B4%D1%86%D0%BE%D0%B2-b21217175/"
+            target="_blank"
+            title="Перейти в linkedin"
+            ><i class="fa-brands fa-linkedin-in fa-2x"></i
+          ></a>
+        </div>
+      </footer>
+    </div>
+
+    <div id="cart_page">
+      <div class="container_cart">
+        <div class="cart_wrapper">
+          <form class="cart_form">
+            <h2 class="cart_form_title">Your cart</h2>
+            <div class="cart-form-logo">
+              <img src="./images/header/cart_black.png" alt="cart" />
+            </div>
+            <div class="wrapper_input_cart">
+              <input
+                class="input_cart"
+                type="text"
+                name="user_name"
+                placeholder="Type your Name"
+              />
+              <input
+                class="input_cart"
+                type="text"
+                name="user_surname"
+                placeholder="Type your Syrname"
+              />
+              <input
+                class="input_cart"
+                type="tel"
+                name="user_tel"
+                placeholder="Type your telephone number"
+              />
+              <input
+                class="input_cart"
+                type="text"
+                name="address"
+                placeholder="Type your address"
+              />
+            </div>
+          </form>
+          <div class="container_cart_btn">
+            <button class="cart-form-btn" id="cart_btn_exit">
+              Back to postcards
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="login_page">
+      <div class="container_login">
+        <div class="login_wrapper">
+          <form class="login_form">
+            <h2 class="login_form_title">Admin Login</h2>
+            <div class="login-form-logo">
+              <img
+                src="./images/header/postcard.png"
+                alt="letter with postcard"
+              />
+            </div>
+            <div class="wrapper_input">
+              <input
+                class="input_login"
+                type="email"
+                name="email"
+                placeholder="Email"
+              />
+            </div>
+            <div class="wrapper_input">
+              <input
+                class="input_password"
+                type="password"
+                name="pass"
+                placeholder="Password"
+              />
+            </div>
+            <div class="container_login_btn">
+              <button class="login-form-btn" id="login_btn_login">Login</button>
+            </div>
+          </form>
+          <div class="container_login_btn">
+            <button class="login-form-btn" id="login_btn_exit">Exit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="admin_page">
+      <div class="container_tabs">
+        <div class="tab">
+          <ul class="tabs-btn">
+            <li class="tab-btn">Adding a postcard</li>
+            <li class="tab-btn">Postcards editing</li>
+          </ul>
+          <div class="tabs-content">
+            <div class="tab-content">
+              <div class="container_admin">
+                <div class="admin_wrapper">
+                  <h2 class="admin_form_title">Add new postcards</h2>
+
+                  <form enctype="multipart/form-data" class="admin_form">
+                    <div class="form-group">
+                      <label for="title">Title</label>
+                      <input
+                        class="form-control"
+                        id="title"
+                        name="title"
+                        placeholder="Enter title"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="price">Price</label>
+                      <input
+                        class="form-control"
+                        id="price"
+                        name="price"
+                        placeholder="Enter price"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="status">In stock</label>
+                      <input
+                        class="form-control"
+                        id="status"
+                        name="status"
+                        placeholder="Enter category"
+                        type="checkbox"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="file">Postcard file</label>
+                      <input
+                        type="file"
+                        class="form-control"
+                        id="file"
+                        name="file"
+                        placeholder="Enter age"
+                      />
+                    </div>
+
+                    <div class="container_admin_btn">
+                      <button type="submit" class="admin-form-btn">
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content">
+              <div class="container_admin">
+                <div class="admin_wrapper">
+                  <h2 class="admin_form_title">Edditing postcards</h2>
+
+                  <div class="admin_paggination_container">
+                    <div class="search-container">
+                      <div class="input-group">
+                        <select
+                          class="form-select"
+                          id="admin_pagination_select_pages"
+                        >
+                          <option value="20" selected>20</option>
+                          <option value="30">30</option>
+                          <option value="50">50</option>
+                          <option value="100">100</option>
+                        </select>
+                      </div>
+
+                      <div class="input-group">
+                        <input
+                          id="admin_search_content"
+                          type="search"
+                          class="form-control rounded input-search"
+                          placeholder="Search"
+                          aria-label="Search"
+                          aria-describedby="search-addon"
+                        />
+                        <a class="button search admin" href="#" target="_self"
+                          >search
+                        </a>
+                      </div>
+                    </div>
+                    <nav aria-label="...">
+                      <ul class="pagination pagination-lg admin"></ul>
+                    </nav>
+
+                    <table class="admin_table_editable">
+                      <thead class="admin_thead">
+                        <tr>
+                          <th class="admin_sortable" data-field="id">ID</th>
+                          <th class="admin_sortable" data-field="status">
+                            Available
+                          </th>
+                          <th>Postcard image</th>
+                          <th class="admin_sortable" data-field="title">
+                            Title
+                          </th>
+                          <th class="admin_sortable" data-field="price">
+                            Price
+                          </th>
+                          <th>&nbsp;</th>
+                          <th>&nbsp;</th>
+                        </tr>
+                      </thead>
+
+                      <tbody></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container_admin_exit_btn">
+        <button class="admin-form-btn" id="admin_btn_exit">Exit</button>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/a765205e66.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/burgerMenu.js"></script>
+    <script src="./js//SPA_Kiosk.js"></script>
+    <script src="./js/PaginationOnAdminPage.js"></script>
+    <script src="./js/log.js"></script>
+    <script src="./js/tabsOnAdmin.js"></script>
+  </body>
+</html>
